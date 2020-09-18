@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-import donateSignUp from '../../assets/donate-signUp.svg';
+import donateSignUpOng from '../../assets/donate-signUpOng.svg';
 
 export const Container = styled.div`
   height: 100vh;
@@ -21,7 +21,6 @@ export const Content = styled.div`
 
   h1 {
     font-size: 43px;
-    margin-bottom: 30px;
   }
 
   form {
@@ -30,6 +29,9 @@ export const Content = styled.div`
     text-align: center;
 
     > div {
+      display: flex;
+      flex-direction: row;
+
       width: 100%;
 
       margin-bottom: 10px;
@@ -44,6 +46,16 @@ export const Content = styled.div`
 
         & + input {
           margin-left: 20px;
+        }
+      }
+
+      select {
+        border-radius: 10px;
+        color: #1a54f8;
+        margin-left: 10px;
+        option {
+          border-radius: 10px;
+          font-size: 18px;
         }
       }
     }
@@ -89,6 +101,6 @@ export const Content = styled.div`
 
 export const Background = styled.div`
   flex: 1;
-  background: url(${donateSignUp}) no-repeat center;
+  background: url(${donateSignUpOng}) no-repeat center;
   background-size: cover;
 `;

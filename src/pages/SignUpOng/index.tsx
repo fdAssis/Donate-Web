@@ -10,12 +10,31 @@ const SignUpOng: React.FC = () => (
 
       <form>
         <div>
-          <input placeholder="Nome" />
-          <input placeholder="Telefone" />
+          <input placeholder="Nome da ONG" />
+          <select name="" placeholder="Categoria">
+            <option disabled selected>
+              Categoria
+            </option>
+            <option value="ddd">Cultura</option>
+            <option value="">Assistencia Social</option>
+            <option value="">Saude</option>
+            <option value="">Educacao e Pesquisa</option>
+            <option value="">Meio Ambiente</option>
+          </select>
         </div>
 
         <div>
           <input placeholder="Email" />
+          <input placeholder="Numero para contato" />
+        </div>
+
+        <div>
+          <input placeholder="Cep" />
+          <input placeholder="UF" />
+        </div>
+
+        <div>
+          <input placeholder="Cidade" />
         </div>
 
         <div>
