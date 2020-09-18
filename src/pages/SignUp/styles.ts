@@ -29,7 +29,7 @@ export const Content = styled.div`
     flex-direction: row;
     width: 70%;
 
-    a {
+    button {
       background: #fff;
       color: #0024f1;
       border-radius: 5px;
@@ -52,7 +52,7 @@ export const Content = styled.div`
           color: #fbfbfc;
         }
       }
-      & + a {
+      & + button {
         margin-left: 20px;
       }
       svg {

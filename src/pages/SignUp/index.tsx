@@ -3,6 +3,17 @@ import { FaGoogle, FaFacebookF } from 'react-icons/fa';
 import { FiArrowLeft } from 'react-icons/fi';
 
 import { Container, Content, Background } from './styles';
+import Api from '../../services/api';
+
+const handleGoogleLogin = async () => {
+  const result = await Api.googlePup();
+
+  if (result) {
+    alert('Certo!');
+  } else {
+    alert('Error!');
+  }
+};
 
 const SignUp: React.FC = () => (
   <Container>
@@ -10,14 +21,15 @@ const SignUp: React.FC = () => (
       <h1>Crie sua conta</h1>
 
       <div>
-        <a href="Google">
+        <button type="submit" onClick={handleGoogleLogin}>
           <FaGoogle size="25" />
           Cadastre-se com Google
-        </a>
-        <a href="Facebook">
+        </button>
+
+        <button type="submit">
           <FaFacebookF size="25" />
           Cadastre-se com Facebook
-        </a>
+        </button>
       </div>
 
       <form>

@@ -39,7 +39,7 @@
     "@typescript-eslint/explicit-function-return-type": [
       "warn",
       {
-        "allowExpressions": false
+        "allowExpressions": true
       }
     ],
     "import/extensions": [
