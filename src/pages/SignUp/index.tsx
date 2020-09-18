@@ -17,6 +17,7 @@ const handleGoogleLogin = async () => {
 
 const SignUp: React.FC = () => (
   <Container>
+    <Background />
     <Content>
       <h1>Crie sua conta</h1>
 
@@ -49,12 +50,13 @@ const SignUp: React.FC = () => (
         <button type="submit">Cadastre-se</button>
       </form>
 
+      <button type="submit">Cadastrar ONG</button>
+
       <a href="login">
         <FiArrowLeft />
         Entrar
       </a>
     </Content>
-    <Background />
   </Container>
 );
 
