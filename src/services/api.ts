@@ -12,15 +12,55 @@ const config = {
   appId: process.env.REACT_APP_APP_ID,
 };
 
+interface SignUpOngData {
+  name: string;
+  email: string;
+  phone: string;
+  category: string;
+  city: string;
+  cep: string;
+  uf: string;
+  password: string;
+  location: {
+    latitude: number;
+    longitude: number;
+  };
+  url_avatar: string;
+  solidarity_campaigns: [];
+  charities: [];
+  medals: [];
+}
+
 const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.firestore();
 
-console.log(config);
-
 export default {
-  googlePup: async () => {
+  googlePup: async (): Promise<firebase.auth.UserCredential> => {
     const provider = new firebase.auth.GoogleAuthProvider();
     const result = await firebaseApp.auth().signInWithPopup(provider);
     return result;
+  },
+  signUpOng: async (ong: SignUpOngData): Promise<void> => {
+    await db
+      .collection('ongs')
+      .doc()
+      .set({
+        name: ong.name,
+        email: ong.email,
+        phone: ong.phone,
+        category: ong.category,
+        city: ong.city,
+        cep: ong.cep,
+        uf: ong.uf,
+        password: ong.password,
+        location: {
+          latitude: ong.location.latitude,
+          longitude: ong.location.longitude,
+        },
+        url_avatar: ong.url_avatar,
+        solidarity_campaigns: ong.solidarity_campaigns,
+        charities: ong.charities,
+        medals: ong.medals,
+      });
   },
 };

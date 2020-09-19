@@ -58,6 +58,16 @@ export const Content = styled.div`
           font-size: 18px;
         }
       }
+
+      textarea {
+        background: #fbfbfc;
+        border-radius: 10px;
+        border: 2px solid #232129;
+        padding: 16px;
+        width: 100%;
+        color: #1a54f8;
+        font-weight: bold;
+      }
     }
   }
 
