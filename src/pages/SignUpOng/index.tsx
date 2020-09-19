@@ -4,25 +4,7 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { Container, Content, Background } from './styles';
 
 import Api from '../../services/api';
-
-interface SignUpOngData {
-  name: string;
-  email: string;
-  phone: string;
-  category: string;
-  city: string;
-  cep: string;
-  uf: string;
-  password: string;
-  location: {
-    latitude: number;
-    longitude: number;
-  };
-  url_avatar: string;
-  solidarity_campaigns: [];
-  charities: [];
-  medals: [];
-}
+import SignUpOngData from './ongInterface';
 
 const SignUpOng: React.FC = () => {
   const [name, setName] = useState('');
@@ -32,6 +14,7 @@ const SignUpOng: React.FC = () => {
   const [uf, setUf] = useState('');
   const [phone, setPhone] = useState('');
   const [city, setCity] = useState('');
+  const [description, setDescription] = useState('');
   const [password, setPassword] = useState('');
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
@@ -54,6 +37,7 @@ const SignUpOng: React.FC = () => {
       uf,
       city,
       password,
+      description,
       charities: [],
       medals: [],
       location: {
@@ -73,6 +57,7 @@ const SignUpOng: React.FC = () => {
     setPhone('');
     setCity('');
     setPassword('');
+    setDescription('');
     setLatitude(0);
     setLongitude(0);
   }
@@ -145,7 +130,11 @@ const SignUpOng: React.FC = () => {
           </div>
 
           <div>
-            <textarea placeholder="Descricao" />
+            <textarea
+              placeholder="Descricao"
+              value={description}
+              onChange={e => setDescription(e.target.value)}
+            />
           </div>
 
           <button type="submit">Cadastrar</button>

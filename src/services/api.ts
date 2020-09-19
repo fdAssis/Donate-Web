@@ -2,6 +2,8 @@ import * as firebase from 'firebase';
 import 'firebase/firebase-auth';
 import 'firebase/firebase-firestore';
 
+import SignUpOngData from '../pages/SignUpOng/ongInterface';
+
 const config = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -11,25 +13,6 @@ const config = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID,
 };
-
-interface SignUpOngData {
-  name: string;
-  email: string;
-  phone: string;
-  category: string;
-  city: string;
-  cep: string;
-  uf: string;
-  password: string;
-  location: {
-    latitude: number;
-    longitude: number;
-  };
-  url_avatar: string;
-  solidarity_campaigns: [];
-  charities: [];
-  medals: [];
-}
 
 const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.firestore();
@@ -53,6 +36,7 @@ export default {
         cep: ong.cep,
         uf: ong.uf,
         password: ong.password,
+        description: ong.description,
         location: {
           latitude: ong.location.latitude,
           longitude: ong.location.longitude,
