@@ -65,8 +65,13 @@ export const Content = styled.div`
         border: 2px solid #232129;
         padding: 16px;
         width: 100%;
+        height: 120px;
         color: #1a54f8;
         font-weight: bold;
+
+        &::placeholder {
+          font-weight: 500;
+        }
       }
     }
   }

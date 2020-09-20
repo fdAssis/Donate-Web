@@ -14,6 +14,6 @@ export default interface SignUpOngData {
   };
   url_avatar: string;
   solidarity_campaigns: [];
-  charities: [];
+  charitable_actions: [];
   medals: [];
 }

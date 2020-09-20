@@ -19,7 +19,7 @@ const SignUpOng: React.FC = () => {
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
 
-  navigator.geolocation.getCurrentPosition(function (position) {
+  navigator.geolocation.getCurrentPosition(position => {
     setLatitude(position.coords.latitude);
     setLongitude(position.coords.longitude);
   });
@@ -38,7 +38,7 @@ const SignUpOng: React.FC = () => {
       city,
       password,
       description,
-      charities: [],
+      charitable_actions: [],
       medals: [],
       location: {
         latitude,

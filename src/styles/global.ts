@@ -15,7 +15,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, button, select {
+  body, input, button, select, textarea {
     font: 16px Ubuntu, sans-serif;
   }
 

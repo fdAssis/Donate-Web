@@ -1,6 +1,7 @@
 import * as firebase from 'firebase';
 import 'firebase/firebase-auth';
 import 'firebase/firebase-firestore';
+import crypto from 'crypto';
 
 import SignUpOngData from '../pages/SignUpOng/ongInterface';
 
@@ -24,6 +25,11 @@ export default {
     return result;
   },
   signUpOng: async (ong: SignUpOngData): Promise<void> => {
+    const hashPassword = crypto
+      .createHash('md5')
+      .update(ong.password)
+      .digest('hex');
+
     await db
       .collection('ongs')
       .doc()
@@ -35,7 +41,7 @@ export default {
         city: ong.city,
         cep: ong.cep,
         uf: ong.uf,
-        password: ong.password,
+        password: hashPassword,
         description: ong.description,
         location: {
           latitude: ong.location.latitude,
@@ -43,7 +49,7 @@ export default {
         },
         url_avatar: ong.url_avatar,
         solidarity_campaigns: ong.solidarity_campaigns,
-        charities: ong.charities,
+        charitable_actions: ong.charitable_actions,
         medals: ong.medals,
       });
   },
