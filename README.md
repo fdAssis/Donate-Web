@@ -1,6 +1,6 @@
 <h1 align="center">
     <img width="200" alt="Donate" src="screenshots/donateLogo.png" />
-  
+    <br>
     Donate Web
 </h1>
 
