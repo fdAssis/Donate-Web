@@ -28,9 +28,3 @@
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
-
-<p align="center">
-  <img alt="Home" src="screenshots/donateHome.png">
-
-  <img alt="App Demo" src="screenshots/userSignUp.png">
-</p>
