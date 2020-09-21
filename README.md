@@ -1,6 +1,5 @@
 <h1 align="center">
     <img width="200" alt="Donate" src="screenshots/donateLogo.png" />
-    <br>
     Donate Web
 </h1>
 
@@ -29,8 +28,3 @@
   <a href="#memo-license">License</a>
 </p>
 
-<p align="center">
-  <img alt="Home" src="screenshots/donateHome.png">
-
-  <img alt="App Demo" src="screenshots/userSignUp.png">
-</p>

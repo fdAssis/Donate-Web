@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiLogIn } from 'react-icons/fi';
-
+import { Link } from 'react-router-dom';
 import { Container, Content, Background } from './styles';
 
 const SignIn: React.FC = () => (
@@ -21,10 +21,10 @@ const SignIn: React.FC = () => (
         <a href="teste">Esqueci minha senha</a>
       </form>
 
-      <a href="login">
+      <Link to="/signup">
         <FiLogIn />
         Criar conta
-      </a>
+      </Link>
     </Content>
     <Background />
   </Container>

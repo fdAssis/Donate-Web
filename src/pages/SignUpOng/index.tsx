@@ -1,6 +1,6 @@
 import React, { useState, FormEvent } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
-
+import { Link } from 'react-router-dom';
 import { Container, Content, Background } from './styles';
 
 import Api from '../../services/api';
@@ -140,10 +140,10 @@ const SignUpOng: React.FC = () => {
           <button type="submit">Cadastrar</button>
         </form>
 
-        <a href="login">
+        <Link to="/">
           <FiArrowLeft />
           Entrar
-        </a>
+        </Link>
       </Content>
       <Background />
     </Container>

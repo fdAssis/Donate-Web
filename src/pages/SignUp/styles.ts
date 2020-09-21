@@ -105,23 +105,25 @@ export const Content = styled.div`
     }
   }
 
-  > button {
-    background: #fbfbfc;
+  a {
+    > button {
+      background: #fbfbfc;
 
-    height: 56px;
-    border-radius: 10px;
-    border: solid #1a54f8 3px;
-    padding: 0 16px;
-    color: #1a54f8;
-    width: 490px;
-    font-weight: bold;
-    margin-top: -50px;
-    transition: background-color 0.3s;
+      height: 56px;
+      border-radius: 10px;
+      border: solid #1a54f8 3px;
+      padding: 0 16px;
+      color: #1a54f8;
+      width: 490px;
+      font-weight: bold;
+      margin-top: -50px;
+      transition: background-color 0.3s;
 
-    &:hover {
-      background: ${shade(0.1, '#1a54f8')};
-      color: #fbfbfc;
-      border-color: #fbfbfc;
+      &:hover {
+        background: ${shade(0.1, '#1a54f8')};
+        color: #fbfbfc;
+        border-color: #fbfbfc;
+      }
     }
   }
 
