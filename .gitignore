@@ -40,3 +40,7 @@ yarn-error.log*
 /.changelog
 .npm/
 dist
+
+.firebase
+.firebaserc
+firebase.json
